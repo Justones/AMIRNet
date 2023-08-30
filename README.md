@@ -8,6 +8,19 @@
 ### Dataset
 The dataset used in our experiments consists of multi-degraded images sampled from SIDD, DDPD, LOL, and REDS. It can be downloaded from the [BaiduYun](https://pan.baidu.com/s/1tjNITPIeTMOKHfShNvxFgA?pwd=bcbf)[code:bcbf]. Please refer to our paper for more details.
 
+### Dependencies & Installation
+- NVIDIA GPU
+- Anaconda
+
+create a conda environment, run the command
+```
+conda create --name <env> --file requirements.txt
+```
+Then activate it
+
+```
+conda activate <env>
+```
 
 - - - - -
 ### Train & Test
