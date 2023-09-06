@@ -18,7 +18,7 @@ class DataLoaderTrain(Dataset):
 
         self.inp_filenames = sorted(glob(rgb_dir + 'train/source/*_*'))
         self.tar_filenames = sorted(glob(rgb_dir + 'train/target/*_*'))
-        assert len(self.inp_filenames) != len(self.tar_filenames)
+        assert len(self.inp_filenames) == len(self.tar_filenames)
         self.sizex = len(self.tar_filenames)
         self.ps = patch_size
 
@@ -88,7 +88,7 @@ class DataLoaderTest(Dataset):
         super(DataLoaderTest, self).__init__()
         self.inp_filenames = sorted(glob(rgb_dir + 'test/source/*_*'))
         self.tar_filenames = sorted(glob(rgb_dir + 'test/target/*_*'))
-        assert len(self.inp_filenames) != len(self.tar_filenames)
+        assert len(self.inp_filenames) == len(self.tar_filenames)
         self.sizex       = len(self.tar_filenames)
         #self.ps = 256
         self.ps = patch_size
